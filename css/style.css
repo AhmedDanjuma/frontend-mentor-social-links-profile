@@ -1,0 +1,114 @@
+:root {
+    --main-bg-grey-900: hsl(0, 0%, 8%);
+    --card-bg-grey-800: hsl(0, 0%, 12%);
+    --btn-bg-grey-700: hsl(0, 0%, 20%);
+    --white: hsl(0, 0%, 100%);
+    --attribution-color: hsl(228, 45%, 44%);
+    --green: hsl(75, 94%, 57%);
+    --card-bio-transparent-white: hsla(0, 0%, 100%, 0.85);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px; /* Base font size for the entire document, ensuring consistent scaling and readability across different devices and screen sizes. */
+}
+
+body {
+    font-family: 'Inter', sans-serif; 
+    line-height: 1.5; /* Sets the line height to 1.5 times the font size, improving readability by providing adequate spacing between lines of text. */
+    background-color: var(--main-bg-grey-900);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh; /* Ensures the body takes up at least the full viewport height, allowing for proper centering of content even on taller screens. */
+}
+
+.card {
+    background-color: var(--card-bg-grey-800);
+    border-radius: 10px;
+    padding: 32px;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    margin: auto 0; /* Centers the card vertically within the body, while allowing it to take up the full width on smaller screens. */
+}
+
+.card__image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+    transition: transform 0.3s ease;
+    object-fit: cover; /* Ensures the image covers the entire area of the container without distortion, maintaining its aspect ratio. */
+}
+
+.card__image:hover {
+    transform: scale(1.1);
+}
+
+.card__name {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card__location {
+    color: var(--green);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.card__bio {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--card-bio-transparent-white);
+    margin-bottom: 1.5rem;
+}
+
+.card__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.button {
+    background-color: var(--btn-bg-grey-700);
+    color: var(--white);
+    text-decoration: none;
+    padding: 12px;  /* Spacing inside the button */
+    border-radius: 7px;
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    width: 100%;
+    cursor: pointer; /* Changes cursor to a hand icon on hover */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 2px;
+}
+
+.button:hover {
+    background-color: var(--green); /* Background Color change on hover */
+    color: var(--main-bg-grey-900); /* Color change on hover */
+}
+.attribution { 
+    font-size: 0.6875rem; 
+    font-weight: 600;
+    text-align: center;
+    margin-top: auto;
+}
+    
+.attribution a { 
+    color: var(--attribution-color); 
+    text-decoration: none;
+}
